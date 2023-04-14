@@ -20,7 +20,7 @@ Para instalar las dependencias necesarias, se puede utilizar el archivo `require
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## Ejecución
 
@@ -28,8 +28,9 @@ Para ejecutar el programa, se debe utilizar el archivo principal `main.py` que s
 
 ```bash
 main.py -h
+```
 
 ## Autores
 
-Este proyecto fue creado por Gonzalo López(enlace a perfil de autor 1)
+Este proyecto fue creado por [Gonzalo López](https://github.com/Glopez-a)
 
