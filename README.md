@@ -18,14 +18,16 @@ Para poder ejecutar este proyecto, se necesitan las siguientes dependencias:
 
 Para instalar las dependencias necesarias, se puede utilizar el archivo `requirements.txt` que se encuentra en la raíz del proyecto. Para instalar las dependencias, se debe ejecutar el siguiente comando en la terminal:
 
-
+```bash
+pip install -r requirements.txt
 
 
 ## Ejecución
 
-Para ejecutar el programa, se debe utilizar el archivo principal `main.py` que se encuentra en la raiz del proyecto. Para ejecutar la ETL, se debe ejecutar el siguiente comando en la terminal:
+Para ejecutar el programa, se debe utilizar el archivo principal `main.py` que se encuentra en la raiz del proyecto. Para ejecutar la ETL, existen dos posibles opciones. Ejecuta el siguiente comando para más información:
 
-
+```bash
+main.py -h
 
 ## Autores
 
