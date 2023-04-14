@@ -1,6 +1,6 @@
-# Nombre del Proyecto
+# Estaciones BiciMad
 
-Este proyecto se llama ETL de Datos desde API y Base de Datos a CSV. El objetivo de este proyecto es crear un programa en python que te permita saber cuál es la estación de BiciMad más cercana a un centro deportivo del ayuntamiento de Madrid. Para ello, a través de una ETL, se extrae información de una API y de una base de datos, se transforma y finalmente se carga en un csv para su visualización. 
+Este proyecto se llama "Estaciones de BiciMad". El objetivo de este proyecto ha consistido en crear un programa en python que te permita saber cuál es la estación de BiciMad más cercana a un centro deportivo del ayuntamiento de Madrid.
 
 ## Descripción
 
@@ -29,6 +29,12 @@ Para ejecutar el programa, se debe utilizar el archivo principal `main.py` que s
 ```bash
 main.py -h
 ```
+
+## Visualización
+
+Además de los CSVs, se creará un plot parecido al que se muestra a continuación:
+
+![Estaciones BiciMad y Centros Deportivos](./img/plot.png "Estaciones BiciMad y Centros Deportivos")
 
 ## Autores
 
