@@ -19,6 +19,7 @@ Para poder ejecutar este proyecto, se necesitan las siguientes dependencias:
 Para instalar las dependencias necesarias, se puede utilizar el archivo `requirements.txt` que se encuentra en la raíz del proyecto. Para instalar las dependencias, se debe ejecutar el siguiente comando en la terminal:
 
 ```bash
+git clone https://github.com/Glopez-a/m1_project.git
 pip install -r requirements.txt
 ```
 
