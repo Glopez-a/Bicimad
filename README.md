@@ -28,7 +28,7 @@ pip install -r requirements.txt
 Para ejecutar el programa, se debe utilizar el archivo principal `main.py` que se encuentra en la raiz del proyecto. Para ejecutar la ETL, existen dos posibles opciones. Ejecuta el siguiente comando para más información:
 
 ```bash
-main.py -h
+python main.py -h
 ```
 
 ## Visualización
