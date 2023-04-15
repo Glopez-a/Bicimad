@@ -1,13 +1,13 @@
 import duckdb
 import pandas as pd
-import re
 import requests
 import json
 
 
 def import_bicis(path):
     conn = duckdb.connect(path, read_only=True)
-    df = conn.execute('SELECT name, "geometry.coordinates" AS Coordinates, address AS "Station Location"  FROM bicimad_stations').fetch_df()
+    df = conn.execute('SELECT name, "geometry.coordinates" AS Coordinates,\
+                       address AS "Station Location"  FROM bicimad_stations').fetch_df()
     df.to_csv("./data/raw_bicis.csv", index=False)
     return df
 

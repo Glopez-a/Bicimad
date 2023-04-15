@@ -12,8 +12,8 @@
 from dotenv import dotenv_values
 import argparse
 from modules import acquisition as imp
-from modules import clean as cl
-from modules import result as res
+from modules import wrangling as wra
+from modules import visualization as vis
 
 
 # Argument parser function
@@ -44,29 +44,27 @@ print(API_PATH)
 if __name__ == '__main__':
     if (command.noplace == True):
         df_raw_bici = imp.import_bicis(DB_PATH)
-        df_clean_bici = cl.clean_bicis(df_raw_bici)
+        df_clean_bici = wra.clean_bicis(df_raw_bici)
         json_raw_dep = imp.import_deps(API_PATH)
-        df_clean_dep = cl.clean_deps(json_raw_dep)
-        cl.plot_function(df_clean_bici, df_clean_dep)
-        column = res.closest_column(df_clean_dep, df_clean_bici)
-        df_result = res.create_complete_dataframe(column, df_clean_dep)
+        df_clean_dep = wra.clean_deps(json_raw_dep)
+        vis.plot_function(df_clean_bici, df_clean_dep)
+        column = vis.closest_column(df_clean_dep, df_clean_bici)
+        df_result = vis.create_complete_dataframe(column, df_clean_dep)
         print(df_result)
     elif (command.place != None):
         df_raw_bici = imp.import_bicis(DB_PATH)
-        df_clean_bici = cl.clean_bicis(df_raw_bici)
+        df_clean_bici = wra.clean_bicis(df_raw_bici)
         json_raw_dep = imp.import_deps(API_PATH)
-        df_clean_dep = cl.clean_deps(json_raw_dep)
-        df_clean_special_dep = cl.clean_special_deps(df_clean_dep, command.place)
-        cl.plot_function(df_clean_bici, df_clean_special_dep)
-        #column = res.process_place(command.place, df_clean_dep, df_clean_bici)
+        df_clean_dep = wra.clean_deps(json_raw_dep)
+        df_clean_special_dep = wra.clean_special_deps(df_clean_dep, command.place)
         if (len(df_clean_special_dep) == 0):
             result = 'No existe ninguna instalación deportiva con un nombre parecido!'
             print(result)
-        column = res.closest_column(df_clean_special_dep, df_clean_bici)
-        df_result = res.create_complete_dataframe(column, df_clean_special_dep)
-        print(df_result)
-        #df_result = res.create_special_dataframe(column)
-        #print(df_result)
+        else:
+            vis.plot_function(df_clean_bici, df_clean_special_dep)
+            column = vis.closest_column(df_clean_special_dep, df_clean_bici)
+            df_result = vis.create_complete_dataframe(column, df_clean_special_dep)
+            print(df_result)
     else:
         result = 'FATAL ERROR...you need to select the correct method'
         print(result)
