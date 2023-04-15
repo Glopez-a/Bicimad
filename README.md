@@ -6,6 +6,11 @@ Este proyecto se llama "Estaciones de BiciMad". El objetivo de este proyecto ha 
 
 Este proyecto utiliza Python para realizar la ETL de datos. Primero, se extrae información de la API del ayuntamiento de Madrid y de una base de datos Duckdb utilizando librerías como `requests` y `duckdb`. Luego, se transforman los datos utilizando librerías como `pandas` y `geopandas` para calcular las estaciones de BiciMad más cercanas a nuestros puntos de interés. Finalmente, se crea un DataFrame con esta información. Durante todas las etapas del dato, se almacena la información en distintos CSVs, de esta forma garantizamos el linaje del dato.
 
+## Diagrama de flujos
+
+![Diagrama](./img/Diagrama.png "")
+
+
 ## Dependencias
 
 Para poder ejecutar este proyecto, se necesitan las siguientes dependencias:
