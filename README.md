@@ -1,6 +1,5 @@
 # Estaciones BiciMad
-
-Este proyecto se llama "Estaciones de BiciMad". El objetivo de este proyecto ha consistido en crear un programa en python que te permita saber cuál es la estación de BiciMad más cercana a un centro deportivo del ayuntamiento de Madrid.
+El objetivo de este proyecto ha consistido en crear un programa en python que te permita saber cuál es la estación de BiciMad más cercana a un centro deportivo del ayuntamiento de Madrid.
 
 ## Descripción
 
